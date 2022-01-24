@@ -4,7 +4,6 @@
 
 ## In This Project We Are Converting A Static Landing Page Into A Dynamic One With The Help Of Javascript.
 
-Starter Code From [repository](https://github.com/udacity/fend/tree/refresh-2019/projects/Udacity-Landing-Page)
 
 We Are Converting A Static Landing Page Into A Dynamic One Using Javascript.<br>
 To Create A Responsive Layout Of The Landing Page To Use Across All Devices, Such As Modern Desktops, Tablets, And Phone Browsers.
