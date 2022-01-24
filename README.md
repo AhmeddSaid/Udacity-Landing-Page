@@ -1,9 +1,5 @@
 # Udacity - Landing Page Project
 
-![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/AhmeddSaid/Udacity-Landing-Page?include_prereleases)
-![GitHub last commit](https://img.shields.io/github/last-commit/AhmeddSaid/Udacity-Landing-Page)
-![GitHub issues](https://img.shields.io/github/issues-raw/AhmeddSaid/Udacity-Landing-Page)
-![GitHub pull requests](https://img.shields.io/github/issues-pr/AhmeddSaid/Udacity-Landing-Page)
 
 
 ## In This Project We Are Converting A Static Landing Page Into A Dynamic One With The Help Of Javascript.
