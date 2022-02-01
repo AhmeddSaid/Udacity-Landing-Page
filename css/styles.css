@@ -9,6 +9,10 @@
 */
 
 /* ---- Base Rules ---- */
+::selection {
+    background-color: #cc1;
+    color: black;
+}
 body {
     background: rgb(136, 203, 171);
     background: linear-gradient(
@@ -26,6 +30,7 @@ h1 {
     font-family: "Fira Sans", sans-serif;
     font-size: 3em;
     margin: 2em 1rem;
+    text-shadow: 1px 1px 5px rgb(0, 0, 0);
 }
 
 @media only screen and (min-width: 35em) {
@@ -40,6 +45,7 @@ h2 {
     font-family: "Oxygen", Sans-Serif;
     font-size: 3em;
     color: #fff;
+    text-shadow: 1px 1px 5px rgb(0, 0, 0);
 }
 
 p {
@@ -68,7 +74,8 @@ section {
 .navbar__menu ul {
     padding-left: 0;
     margin: 0;
-    text-align: right;
+    text-align: left;
+    user-select: none;
 }
 
 .navbar__menu li {
@@ -81,23 +88,24 @@ section {
     font-weight: bold;
     text-decoration: none;
     color: #000;
+    border-radius: 15px;
 }
 
 .navbar__menu .menu__link:hover {
     background: #333;
     color: #fff;
-    transition: ease 0.3s all;
+    transition: ease 800ms all;
+    border-radius: 30px;
+    text-shadow: 0px 0px 5px rgb(255, 255, 255), 0px 0px 15px #cc1;
 }
 
-.navbar__menu .menu__link:focus {
-    background-color: #333;
-    color: #fff;
-    transition: ease 0.3s all;
-}
-.navbar__menu .menu__link:active {
-    background-color: #333;
-    color: #fff;
-    transition: ease 0.3s all;
+/* active class for navbar */
+.active-section {
+    background-color: #333 !important;
+    color: #fff !important;
+    transition: ease 800ms all !important;
+    border-radius: 30px !important;
+    text-shadow: 0px 0px 5px rgb(255, 255, 255), 0px 0px 15px #cc1 !important;
 }
 
 /* Header Styles */
@@ -222,6 +230,12 @@ section.your-active-class {
         rgba(0, 0, 0, 0.1) 0%,
         rgba(0, 0, 0, 0) 100%
     );
+    text-shadow: 1px 1px 5px rgb(0, 0, 0);
+    transition: ease 1500ms all;
+}
+section.your-active-class h2 {
+    text-shadow: 1px 1px 5px #cc1;
+    transition: ease 1500ms all;
 }
 
 section.your-active-class .landing__container::before {

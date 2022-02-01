@@ -55,6 +55,7 @@ const buildNavBar = () => {
         let itemName = `${navBarItemName}`; // select each section data-nav value
         let itemLink = `#${navBarSectionId}`; // select each section id
         navBarItemLink.append(itemName); // sets the name of link to the data-nav of the section
+        navBarItemLink.dataset.nav = navBarSectionId;
         navBarItemLink.href = itemLink; // sets href attribute value to section id
         navBarItem.append(navBarItemLink); // adds link element to list item
         navBarList.append(navBarItem); // adds list item to the empty unordered list
@@ -64,12 +65,18 @@ buildNavBar();
 
 // Add class 'active' to section when near top of viewport
 const activeSection = () => {
-    listPageSections.forEach((listPageSection) => {
+    pageSections.forEach((PageSection) => {
         // loop through all sections
-        if (view(listPageSection)) {
-            listPageSection.classList.add("your-active-class"); // if the section in viewport it will get active class
+        const activeSectionLink = navBarList.querySelector(
+            `[data-nav=${PageSection.id}]`
+        ); // selects elements with data-nav equals to each section id
+
+        if (view(PageSection)) {
+            PageSection.classList.add("your-active-class"); // if the section in viewport it will get active class
+            activeSectionLink.classList.add("active-section"); // if the section in viewport link will get active class
         } else {
-            listPageSection.classList.remove("your-active-class");
+            PageSection.classList.remove("your-active-class");
+            activeSectionLink.classList.remove("active-section");
         }
     });
 };
